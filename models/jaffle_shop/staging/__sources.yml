@@ -2,8 +2,9 @@ version: 2
 
 sources:
   - name: ecom
-    schema: raw
     description: E-commerce data for the Jaffle Shop
+    database: workspace
+    schema: raw
     tables:
       - name: raw_customers
         description: One record per person who has purchased one or more items
