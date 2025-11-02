@@ -1,0 +1,99 @@
+#version: 2
+#
+#sources:
+#  # Fonte 1: Dados do sistema SUN
+#  - name: sun61data
+#    description: "Fontes de dados financeiros do sistema SUN"
+#    # O dbt usará o database/schema do seu 'profiles.yml' se você omitir,
+#    # mas é uma boa prática ser explícito.
+#    database: prod_source
+#    schema: sun61data
+#    
+#    tables:
+#      - name: gwl_a_salfldg
+#        description: "Tabela de razão analítica (GWL)"
+#        columns:
+#          - name: ACCNT_CODE
+#          - name: TRANS_DATETIME
+#          - name: D_C
+#          - name: DESCRIPTN
+#          - name: ANAL_T0
+#          - name: ANAL_T1
+#          - name: ANAL_T2
+#          - name: ANAL_T3
+#          - name: ANAL_T4
+#          - name: ANAL_T5
+#          - name: ANAL_T6
+#          - name: ANAL_T7
+#          - name: ANAL_T8
+#          - name: ANAL_T9
+#          - name: AMOUNT
+#          - name: CONV_CODE
+#          - name: LAST_CHANGE_DATETIME
+#          - name: JRNAL_TYPE
+#          - name: JRNAL_SRCE
+#          - name: PERIOD
+#
+#      - name: gwd_a_salfldg
+#        description: "Tabela de razão analítica (GWD)"
+#        columns:
+#          - name: ACCNT_CODE
+#          - name: TRANS_DATETIME
+#          - name: D_C
+#          - name: DESCRIPTN
+#          - name: ANAL_T0
+#          - name: ANAL_T1
+#          - name: ANAL_T2
+#          - name: ANAL_T3
+#          - name: ANAL_T4
+#          - name: ANAL_T5
+#          - name: ANAL_T6
+#          - name: ANAL_T7
+#          - name: ANAL_T8
+#          - name: ANAL_T9
+#          - name: AMOUNT
+#          - name: CONV_CODE
+#          - name: LAST_CHANGE_DATETIME
+#          - name: JRNAL_TYPE
+#          - name: JRNAL_SRCE
+#          - name: PERIOD
+#
+#      - name: gwr_a_salfldg
+#        description: "Tabela de razão analítica (GWR)"
+#        columns:
+#          - name: ACCNT_CODE
+#          - name: TRANS_DATETIME
+#          - name: D_C
+#          - name: DESCRIPTN
+#          - name: ANAL_T0
+#          - name: ANAL_T1
+#          - name: ANAL_T2
+#          - name: ANAL_T3
+#          - name: ANAL_T4
+#          - name: ANAL_T5
+#          - name: ANAL_T6
+#          - name: ANAL_T7
+#          - name: ANAL_T8
+#          - name: ANAL_T9
+#          - name: AMOUNT
+#          - name: CONV_CODE
+#          - name: LAST_CHANGE_DATETIME
+#          - name: JRNAL_TYPE
+#          - name: JRNAL_SRCE
+#          - name: PERIOD
+#
+#  # Fonte 2: Tabelas de Analytics
+#  - name: analytics
+#    description: "Tabelas de mapeamento e dimensão"
+#    database: prod_source
+#    schema: analytics
+#    
+#    tables:
+#      - name: sun_financial_period_mapping
+#        description: "Mapeamento de períodos financeiros para datas"
+#        columns:
+#          - name: period
+#          - name: month_name
+#          - name: month_year
+#          - name: month_num
+#          - name: year_num
