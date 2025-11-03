@@ -6,8 +6,8 @@ with
 
     , customers as (
         select
-            id as customer_id
-            , name as customer_name
+            cast(id as string) as customer_id
+            , cast(name as string) as customer_name
         from source
     )
 
