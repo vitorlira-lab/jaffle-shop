@@ -1,3 +1,5 @@
+/*
+
 with base_data as (
     -- Step 1: Union data from three source tables
     select ACCNT_CODE, TRANS_DATETIME, D_C, DESCRIPTN, ANAL_T0, ANAL_T1, ANAL_T2, ANAL_T3, ANAL_T4, ANAL_T5, ANAL_T6, ANAL_T7, ANAL_T8, ANAL_T9, AMOUNT, CONV_CODE, LAST_CHANGE_DATETIME, JRNAL_TYPE, JRNAL_SRCE, PERIOD 
@@ -133,3 +135,4 @@ select
 from final_aggregated
 group by all;
 
+*/

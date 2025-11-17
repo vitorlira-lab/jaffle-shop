@@ -12,6 +12,7 @@ sources:
           - name: id
             tests:
             - not_null
+            - unique
       - name: raw_orders
         description: One record per order (consisting of one or more order items)
         loaded_at_field: ordered_at

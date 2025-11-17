@@ -1,17 +1,17 @@
-#version: 2
+# version: 2
 #
-#sources:
-#  # Fonte 1: Dados do sistema SUN
+# sources:
+#  # Source 1: Data from the SUN system
 #  - name: sun61data
-#    description: "Fontes de dados financeiros do sistema SUN"
-#    # O dbt usará o database/schema do seu 'profiles.yml' se você omitir,
-#    # mas é uma boa prática ser explícito.
+#    description: "Financial data sources from the SUN system"
+#    # dbt will use the database/schema from your 'profiles.yml' if omitted,
+#    # but it's good practice to be explicit.
 #    database: prod_source
 #    schema: sun61data
 #    
 #    tables:
 #      - name: gwl_a_salfldg
-#        description: "Tabela de razão analítica (GWL)"
+#        description: "Analytical ledger table (GWL)"
 #        columns:
 #          - name: ACCNT_CODE
 #          - name: TRANS_DATETIME
@@ -35,7 +35,7 @@
 #          - name: PERIOD
 #
 #      - name: gwd_a_salfldg
-#        description: "Tabela de razão analítica (GWD)"
+#        description: "Analytical ledger table (GWD)"
 #        columns:
 #          - name: ACCNT_CODE
 #          - name: TRANS_DATETIME
@@ -59,7 +59,7 @@
 #          - name: PERIOD
 #
 #      - name: gwr_a_salfldg
-#        description: "Tabela de razão analítica (GWR)"
+#        description: "Analytical ledger table (GWR)"
 #        columns:
 #          - name: ACCNT_CODE
 #          - name: TRANS_DATETIME
@@ -82,18 +82,19 @@
 #          - name: JRNAL_SRCE
 #          - name: PERIOD
 #
-#  # Fonte 2: Tabelas de Analytics
+#  # Source 2: Analytics Tables
 #  - name: analytics
-#    description: "Tabelas de mapeamento e dimensão"
+#    description: "Mapping and dimension tables"
 #    database: prod_source
 #    schema: analytics
 #    
 #    tables:
 #      - name: sun_financial_period_mapping
-#        description: "Mapeamento de períodos financeiros para datas"
+#        description: "Mapping of financial periods to dates"
 #        columns:
 #          - name: period
 #          - name: month_name
 #          - name: month_year
 #          - name: month_num
 #          - name: year_num
+#
